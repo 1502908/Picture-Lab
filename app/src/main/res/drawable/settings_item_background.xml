@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#1F000000">  <!-- 20% 透明度的黑色 -->
+    <item android:id="@android:id/mask">
+        <color android:color="@android:color/white"/>
+    </item>
+    <item android:id="@android:id/background">
+        <color android:color="@android:color/white"/>
+    </item>
+</ripple> 

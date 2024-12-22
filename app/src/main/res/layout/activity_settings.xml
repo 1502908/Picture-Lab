@@ -81,7 +81,9 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="16dp"
-                    android:background="?attr/selectableItemBackground">
+                    android:background="@drawable/settings_item_background"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         android:id="@+id/feedback_icon"
@@ -102,7 +104,9 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="16dp"
-                    android:background="?attr/selectableItemBackground">
+                    android:background="@drawable/settings_item_background"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         android:id="@+id/rate_icon"
@@ -123,7 +127,9 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="16dp"
-                    android:background="?attr/selectableItemBackground">
+                    android:background="@drawable/settings_item_background"
+                    android:clickable="true"
+                    android:focusable="true">
                     <ImageView
                         android:id="@+id/restore_icon"
                         style="@style/SettingsIconStyle"
@@ -167,7 +173,9 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="16dp"
-                    android:background="?attr/selectableItemBackground">
+                    android:background="@drawable/settings_item_background"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         android:id="@+id/privacy_icon"
@@ -188,7 +196,9 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="16dp"
-                    android:background="?attr/selectableItemBackground">
+                    android:background="@drawable/settings_item_background"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         android:id="@+id/terms_icon"
@@ -209,7 +219,9 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="16dp"
-                    android:background="?attr/selectableItemBackground">
+                    android:background="@drawable/settings_item_background"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         android:id="@+id/version_icon"
