@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/feedback_option"
+                style="@style/SettingsOptionStyle">
+                <ImageView
+                    android:id="@+id/feedback_icon"
+                    style="@style/SettingsIconStyle"
+                    android:src="@drawable/ic_feedback"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Feedback"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rate_option"
+                style="@style/SettingsOptionStyle">
+                <ImageView
+                    android:id="@+id/rate_icon"
+                    style="@style/SettingsIconStyle"
+                    android:src="@drawable/ic_rate"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rate"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/restore_option"
+                style="@style/SettingsOptionStyle">
+                <ImageView
+                    android:id="@+id/restore_icon"
+                    style="@style/SettingsIconStyle"
+                    android:src="@drawable/ic_restore"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Restore"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/privacy_option"
+                style="@style/SettingsOptionStyle">
+                <ImageView
+                    android:id="@+id/privacy_icon"
+                    style="@style/SettingsIconStyle"
+                    android:src="@drawable/ic_privacy"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/terms_option"
+                style="@style/SettingsOptionStyle">
+                <ImageView
+                    android:id="@+id/terms_icon"
+                    style="@style/SettingsIconStyle"
+                    android:src="@drawable/ic_terms"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terms"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/version_option"
+                style="@style/SettingsOptionStyle">
+                <ImageView
+                    android:id="@+id/version_icon"
+                    style="@style/SettingsIconStyle"
+                    android:src="@drawable/ic_version"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Version"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.0.0"
+                    android:textColor="#757575"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout> 
