@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!-- 对于 Android 9 及以下版本 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" 
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -25,6 +32,13 @@
             android:name=".SettingsActivity"
             android:label="Settings"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EditImageActivity"
+            android:label="Edit Image"
+            android:theme="@style/Theme.PictureLab"/>
+        <activity
+            android:name=".SaveSuccessActivity"
+            android:theme="@style/Theme.PictureLab"/>
     </application>
 
 </manifest>

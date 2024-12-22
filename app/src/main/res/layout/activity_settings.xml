@@ -2,31 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#F5F5F5">
 
+    <!-- 顶部标题栏 -->
     <LinearLayout
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="16dp">
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:elevation="2dp">
 
         <ImageButton
             android:id="@+id/back_button"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/ic_arrow_back"
+            android:src="@drawable/ic_return"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
             android:contentDescription="Back"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Settings"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginStart="16dp"/>
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"/>
     </LinearLayout>
+
+    <!-- 20px 的灰色间距 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#F5F5F5"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,111 +54,183 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- General 部分（白色背景） -->
+            <LinearLayout
+                android:layout_width="390dp"
                 android:layout_height="wrap_content"
-                android:text="General"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"/>
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:paddingTop="16dp">
 
-            <LinearLayout
-                android:id="@+id/feedback_option"
-                style="@style/SettingsOptionStyle">
-                <ImageView
-                    android:id="@+id/feedback_icon"
-                    style="@style/SettingsIconStyle"
-                    android:src="@drawable/ic_feedback"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Feedback"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/rate_option"
-                style="@style/SettingsOptionStyle">
-                <ImageView
-                    android:id="@+id/rate_icon"
-                    style="@style/SettingsIconStyle"
-                    android:src="@drawable/ic_rate"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rate"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/restore_option"
-                style="@style/SettingsOptionStyle">
-                <ImageView
-                    android:id="@+id/restore_icon"
-                    style="@style/SettingsIconStyle"
-                    android:src="@drawable/ic_restore"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Restore"/>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Others"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="8dp"/>
-
-            <LinearLayout
-                android:id="@+id/privacy_option"
-                style="@style/SettingsOptionStyle">
-                <ImageView
-                    android:id="@+id/privacy_icon"
-                    style="@style/SettingsIconStyle"
-                    android:src="@drawable/ic_privacy"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Privacy"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/terms_option"
-                style="@style/SettingsOptionStyle">
-                <ImageView
-                    android:id="@+id/terms_icon"
-                    style="@style/SettingsIconStyle"
-                    android:src="@drawable/ic_terms"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Terms"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/version_option"
-                style="@style/SettingsOptionStyle">
-                <ImageView
-                    android:id="@+id/version_icon"
-                    style="@style/SettingsIconStyle"
-                    android:src="@drawable/ic_version"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Version"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1.0.0"
-                    android:textColor="#757575"
-                    android:textSize="12sp"/>
+                    android:text="General"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/feedback_option"
+                    android:layout_width="390dp"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/feedback_icon"
+                        style="@style/SettingsIconStyle"
+                        android:src="@drawable/ic_feedback"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Feedback"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rate_option"
+                    android:layout_width="390dp"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/rate_icon"
+                        style="@style/SettingsIconStyle"
+                        android:src="@drawable/ic_rate"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rate"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/restore_option"
+                    android:layout_width="390dp"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/restore_icon"
+                        style="@style/SettingsIconStyle"
+                        android:src="@drawable/ic_restore"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Restore"
+                        android:textColor="#000000"/>
+                </LinearLayout>
             </LinearLayout>
 
+            <!-- 10px 的灰色间距 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#F5F5F5"/>
+
+            <!-- Others 部分（白色背景） -->
+            <LinearLayout
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/privacy_option"
+                    android:layout_width="390dp"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/privacy_icon"
+                        style="@style/SettingsIconStyle"
+                        android:src="@drawable/ic_privacy_policy"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Privacy"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/terms_option"
+                    android:layout_width="390dp"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/terms_icon"
+                        style="@style/SettingsIconStyle"
+                        android:src="@drawable/ic_terms"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terms"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/version_option"
+                    android:layout_width="390dp"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/version_icon"
+                        style="@style/SettingsIconStyle"
+                        android:src="@drawable/ic_version"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Version"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 1.0.0"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout> 

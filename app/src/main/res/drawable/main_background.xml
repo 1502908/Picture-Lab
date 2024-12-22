@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:angle="135"
+                android:startColor="#6A5ACD"
+                android:centerColor="#9370DB"
+                android:endColor="#BA55D3"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/person_illustration"
+        android:gravity="center"/>
+</layer-list> 

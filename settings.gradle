@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Picture Lab"
+rootProject.name = "PictureLab"
 include ':app'
